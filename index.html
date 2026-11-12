@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5ef">
+  <title>The Scriptures — A quiet place for the Word</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="kjv-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#">✳ <span>The Scriptures</span></a>
+      <p class="side-caption">YOUR SPACE</p>
+      <nav>
+        <button class="nav active" data-view="today">◫ <span>Today</span></button>
+        <button class="nav" data-view="read">▤ <span>Read the Bible</span></button>
+        <button class="nav" data-view="devotions">☼ <span>Devotions</span></button>
+        <button class="nav" data-view="topics">⌕ <span>Verse topics</span></button>
+        <button class="nav" data-view="quiz">✳ <span>Daily quiz</span><small id="quizBadge">10</small></button>
+        <button class="nav" data-view="progress">↗ <span>My progress</span></button>
+        <button class="nav" data-view="saved">♧ <span>Bookmarks</span></button>
+      </nav>
+      <div class="sidebar-end"><button id="themeToggle" class="theme">☾ <span>Dark mode</span><i></i></button><button id="readingSettings" class="theme settings-button">Aa <span>Reading appearance</span><b>↗</b></button><div class="profile"><span>J</span><div><b id="profileName">Your account</b><small id="profileEmail">Progress saved on this device</small></div><button id="accountButton">···</button></div></div>
+    </aside>
+    <main>
+      <header><button class="hamb" id="hamb">☰</button><span class="crumb">Your space <b>/</b> <strong id="pageName">Today</strong></span><div class="head-right"><time id="date"></time><button id="globalSearch" aria-label="Search">⌕</button><button id="loginButton">Sign in</button></div></header>
+      <section id="app" class="content"></section>
+      <footer>Made for a slower, more meaningful moment. <span>THE SCRIPTURES · PAUSE WITH PURPOSE</span></footer>
+    </main>
+  </div>
+  <div id="toast" role="status"></div>
+  <dialog id="dialog"><button class="close" id="closeDialog">×</button><div id="dialogBody"></div></dialog>
+</body>
+</html>
